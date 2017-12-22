@@ -85,7 +85,7 @@ We apply the appropriate differencing order (d) to make a time series stationary
 
 Step 2: Identification of p and q
 
-In this step, we identify the appropriate order of Autoregressive (AR) and Moving average (MA) processes by using the Autocorrelation function (ACF) and Partial Autocorrelation function (PACF).  Please refer to our blog, “Starting out with Time Series” for an explanation of ACF and PACF functions.
+In this step, we identify the appropriate order of Autoregressive (AR) and Moving average (MA) processes by using the Autocorrelation function (ACF) and Partial Autocorrelation function (PACF).  
 
 Identifying the p order of AR model
 
@@ -98,6 +98,9 @@ For MA models, the PACF will dampen exponentially and the ACF plot will be used 
 Step 3: Estimation and Forecasting
 
 Once we have determined the parameters (p,d,q) we estimate the accuracy of the ARIMA model on a training data set and then use the fitted model to forecast the values of the test data set using a forecasting function. In the end, we cross check whether our forecasted values are in line with the actual values.
+
+Unfortunately, the ARIMA classes in statsmodels are extremely slow, so to do this you'll probably want to parallelize this.
+```The SMAPE score is : 0.65757```
 
 
 
