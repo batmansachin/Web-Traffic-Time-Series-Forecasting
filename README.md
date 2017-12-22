@@ -60,6 +60,7 @@ There's also a strange feature in the English data around day 200.
 I mainly used the median approach Along with mathematical series like :- palindrome, prime number, exponential , catalan number
 .The idea is to compute the median of the series in different window sizes at the end of the series,and the window sizes are increasing to take median. Then a median of these medians is taken as the estimate for the next 60 days. I my given data sheet 
 exponential series work better.
+
 ```The SMAPE score is : 0.65757```
 # and the window sizes are increasing exponentially with the base of golden ratio.
 ### ARIMA approach (Autoregressive Integrated Moving Average)
