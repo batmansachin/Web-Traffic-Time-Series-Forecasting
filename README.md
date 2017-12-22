@@ -40,33 +40,40 @@ End with an example of getting some data out of the system or using it for a lit
 
 
 ## Deployment
-
+```
 I. Importation & Data Cleaning
 II. Aggregation & Visualisation
 III. Machine Learning Approach
 IV Median of Medians Model Approach
 V. ARIMA approach (Autoregressive Integrated Moving Average)
 VI. Comparaison & Conclusion
-
+```
 ### Importation & Data Cleaning
+The data is originally structured so that 550 dates refer to a column each. and the 145k article nanes are stored in the additional Page column.The key data contains a unique alpha-numerical ID for each Page and Date combination, which is the reason for the relatively large file size.There are about 8% of missing values in this data set, which is not trivial. We will neeed to take them into account in our analysis.
 ### Aggregation & Visualisation
+Traffic Influenced by Page Language:-
+There are 7 languages plus the media pages. The languages used here are: English, Japanese, German, French, Chinese, Russian, and Spanish. This will make any analysis of the URLs difficult since there are four different writing systems to be dealt with (Latin, Cyrillic, Chinese, and Japanese). Here, I will create dataframes for the different types of entries. I will then calculate the sum of all views. I would note that because the data comes from several different sources, the sum will likely be double counting some of the views.
+English shows a much higher number of views per page, as might be expected since Wikipedia is a US-based site. There is a lot more structure here than I would have expected. The English and Russian plots show very large spikes around day 400 (around August 2016), with several more spikes in the English data later in 2016. My guess is that this is the effect of both the Summer Olympics in August and the election in the US.
+
+There's also a strange feature in the English data around day 200.
 ### Median of Medians Model Approach
+
 ### ARIMA approach (Autoregressive Integrated Moving Average)
 ARIMA stands for Autoregressive Integrated Moving Average.
 The ARIMA model combines three basic methods:
  ```  
-AutoRegression (AR) – In auto-regression the values of a given time
-series data are regressed on their own lagged values, which is indicated 
-by the “p” value in the model.
+AutoRegression (AR) – In auto-regression the values of a given timeseries data 
+are regressed on their own lagged values, which is indicated by the “p” value in
+the model.
     
-Differencing (I-for Integrated) – This involves differencing the time 
-series data to remove the trend and convert a non-stationary time series
-to a stationary one. This is indicated by the “d” value in the model. If
-d = 1, it looks at the difference between two time series entries, if d = 2 
-it looks at the differences of the differences obtained at d =1, and so forth.
+Differencing (I-for Integrated) – This involves differencing the time series data 
+to remove the trend and convert a non-stationary time seriesto a stationary one. 
+This is indicated by the “d” value in the model. If d = 1, it looks at the difference
+between two time series entries, if d = 2 it looks at the differences of the differences
+obtained at d =1, and so forth.
 
-Moving Average (MA) – The moving average nature of the model is represented by 
-the “q” value which is the number of lagged values of the error term.
+Moving Average (MA) – The moving average nature of the model is represented by the “q” 
+value which is the number of lagged values of the error term.
 ```
 
 This model is called Autoregressive Integrated Moving Average or ARIMA(p,d,q) of Yt.  We will follow the steps enumerated below to build our model.
