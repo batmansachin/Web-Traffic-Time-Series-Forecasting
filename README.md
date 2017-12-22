@@ -1,17 +1,23 @@
-# Project Title
+# Web Traffic Time Series Forecasting
 
-One Paragraph of project description goes here
+Forecast future traffic to Wikipedia pages
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This Project is about predicting the future behaviour of time series’ that describe the web traffic for Wikipedia articles. The data contains about 145k time series and comes in two separate files: train_1.csv, train_2.csv holds the traffic data, where each column is a date and each row is an article, and key_1.csv , key_2.csv contains a mapping between page names and a unique ID column (to be used in the submission file).
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 ```
-Give examples
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import re
+%matplotlib inline
+from statsmodels.tsa.arima_model import ARIMA
+import warnings
 ```
 
 ### Installing
@@ -32,25 +38,6 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
