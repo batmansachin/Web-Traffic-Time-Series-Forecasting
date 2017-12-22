@@ -48,10 +48,10 @@ IV Median of Medians Model Approach
 V. ARIMA approach (Autoregressive Integrated Moving Average)
 VI. Comparaison & Conclusion
 
-# Importation & Data Cleaning
-# Aggregation & Visualisation
-# Median of Medians Model Approach
-# ARIMA approach (Autoregressive Integrated Moving Average)
+### Importation & Data Cleaning
+### Aggregation & Visualisation
+### Median of Medians Model Approach
+### ARIMA approach (Autoregressive Integrated Moving Average)
 ARIMA stands for Autoregressive Integrated Moving Average.
 The ARIMA model combines three basic methods:
     
