@@ -44,7 +44,7 @@ I mainly used the median approach Along with mathematical series like :- palindr
 .The idea is to compute the median of the series in different window sizes at the end of the series,and the window sizes are increasing to take median. Then a median of these medians is taken as the estimate for the next 60 days. I my given data sheet 
 exponential series work better.
 
-```The SMAPE score is : 0.65757```
+```The SMAPE score is : 39.341351```
 ### ARIMA approach (Autoregressive Integrated Moving Average)
 ARIMA stands for Autoregressive Integrated Moving Average.
 The ARIMA model combines three basic methods:
@@ -94,7 +94,7 @@ Step 3: Estimation and Forecasting
 Once we have determined the parameters (p,d,q) we estimate the accuracy of the ARIMA model on a training data set and then use the fitted model to forecast the values of the test data set using a forecasting function. In the end, we cross check whether our forecasted values are in line with the actual values.
 
 Unfortunately, the ARIMA classes in statsmodels are extremely slow, so to do this you'll probably want to parallelize this.
-```The SMAPE score is : 0.65757```
+```The SMAPE score is : 65.757```
 
 
 
